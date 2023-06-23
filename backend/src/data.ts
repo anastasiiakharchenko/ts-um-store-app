@@ -1,0 +1,40 @@
+import {Product} from "./types/Product";
+
+export const sampleProducts: Product[] = [
+    {
+        name: 'Kharkiv Oversize T-Shirt',
+        slug: 'kharkiv-oversize-t-shirt',
+        category: 'Shirts',
+        image: '../images/IMG_0765.PNG',
+        price: 100,
+        countInStock: 10,
+        brand: 'Um Store',
+        rating: 4.5,
+        numReviews: 10,
+        description: 'Made with love',
+    },
+    {
+        name: 'Collab Drop with Oktyabrinska',
+        slug: 'collab-drop-with-oktyabrinska',
+        category: 'Shirts',
+        image: '../images/IMG_0766.PNG',
+        price: 200,
+        countInStock: 10,
+        brand: 'Um Store',
+        rating: 4.5,
+        numReviews: 10,
+        description: 'Made with love',
+    },
+    {
+        name: 'Pink Hoodie OneSize',
+        slug: 'pink-hoodie-onesize',
+        category: 'Shirts',
+        image: '../images/IMG_0767.PNG',
+        price: 300,
+        countInStock: 10,
+        brand: 'Um Store',
+        rating: 4.5,
+        numReviews: 10,
+        description: 'Made with love',
+    },
+]
