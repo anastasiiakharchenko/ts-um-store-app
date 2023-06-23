@@ -1,18 +1,35 @@
-import {useState} from 'react'
-import './App.css'
 import {sampleProducts} from "./data";
+import { Navbar, Container, Nav, Row, Col } from 'react-bootstrap';
 
 function App() {
-    const [count, setCount] = useState(0)
-
     return (
-        <div>
-            <header>Um Store</header>
+        <div className='d-flex flex-column vh-100'>
+            <header>
+                <Navbar
+                    bg="light"
+                    variant="light"
+                    expand="lg"
+                >
+                    <Container>
+                        <Navbar.Brand>Um Store</Navbar.Brand>
+                    </Container>
+                    <Nav>
+                        <a href="/cart" className="nav-link">Cart</a>
+                        <a href="/signin" className="nav-link">Sign In</a>
+                    </Nav>
+                </Navbar>
+            </header>
             <main>
-                <ul>
+                <Container className="mt-3">
+                <Row>
                     {
                         sampleProducts.map(product => (
-                            <li key={product.slug}>
+                            <Col
+                                key={product.slug}
+                                sm={6}
+                                md={4}
+                                lg={3}
+                            >
                                 <img
                                     src={product.image}
                                     alt={product.name}
@@ -20,11 +37,14 @@ function App() {
                                 />
                                 <h2>{product.name}</h2>
                                 <p>{product.price}</p>
-                            </li>))
+                            </Col>))
                     }
-                </ul>
+                </Row>
+                </Container>
             </main>
+            <div className="text-center">
             <footer>All right reserved</footer>
+            </div>
         </div>
     )
 }
